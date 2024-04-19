@@ -12,7 +12,8 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/user/logout",
+      const response = await axios.get(
+        "http://localhost:4000/api/v1/user/logout",
         {
           withCredentials: true,
         }
@@ -34,12 +35,12 @@ const Navbar = () => {
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>
             <Link to={"/"} onClick={() => setShow(false)}>
-              HOME
+              MyHome
             </Link>
           </li>
           <li>
             <Link to={"/job/getall"} onClick={() => setShow(false)}>
-              ALL JOBS
+              ALL leatest job
             </Link>
           </li>
           <li>
@@ -77,4 +78,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
